@@ -1,0 +1,15 @@
+<% if (!data) { %>
+    <p>DATA GAGAL DILOAD</p>
+    <% }else{ %>
+        <% data.forEach(student=> { %>
+            <div class="card">
+                <img src="<%= student.photoUrl %>" alt="<%= student.photoUrl %>">
+                <h2>
+                    <%= student.name %>
+                </h2>
+                <a href="/detail/<%= student.name %>">
+                    Detail !
+                </a>
+            </div>
+            <% }) %>
+                <% } %>
