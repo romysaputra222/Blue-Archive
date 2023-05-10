@@ -10,31 +10,25 @@ server.use(expressLayouts);
 server.use(express.static('public'));
 
 server.get('/', async (req, res) => {
-    try {
-        const data = await getStudent();
-        res.render('index', {
-            title: 'Blue Archive Students',
-            layout: 'layout/main',
-            data
-        });
-    } catch (err) {
-        console.log(err);
-    }
+    const page = req.query.page;
+    const data = await getStudent(page);
+    // con
+    res.render('index', {
+        title: 'Blue Archive Students',
+        layout: 'layout/main',
+        data
+    });
 });
 
-server.get('/detail/:nama', async (req, res) => {
-    try {
-        const nama = req.params.nama;
-        const data = await getStudentByName(nama);
-        res.render('detail', {
-            title: `Detail ${nama}`,
-            layout: 'layout/main',
-            nama,
-            data
-        });
-    } catch (err) {
-        console.log(err);
-    }
+server.get('/detail', async (req, res) => {
+    const nama = req.query.nama;
+    const data = await getStudentByName(nama);
+    res.render('detail', {
+        title: `Detail ${nama}`,
+        layout: 'layout/main',
+        nama,
+        data
+    });
 });
 
 server.use((req, res) => {

@@ -1,6 +1,9 @@
 <% if (!data) { %>
     <p>NAMA TIDAK ADAAAA</p>
     <% }else{ %>
-        <%= JSON.stringify(data) %>
-            <a href="/">back</a>
-            <% } %>
+        <% data.forEach(student=> { %>
+            <img id="foto" src="<%= student.photoUrl %>" alt="<%= student.photoUrl %>">
+            <% }) %>
+                <a href="/">back</a>
+                <% } %>
+                    <img src="" alt="">

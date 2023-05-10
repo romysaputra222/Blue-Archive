@@ -3,11 +3,11 @@
     <% }else{ %>
         <% data.forEach(student=> { %>
             <div class="card">
-                <img src="<%= student.photoUrl %>" alt="<%= student.photoUrl %>">
+                <img id="foto" src="<%= student.photoUrl %>" alt="<%= student.photoUrl %>">
                 <h2>
                     <%= student.name %>
                 </h2>
-                <a href="/detail/<%= student.name %>">
+                <a href="/detail?nama=<%= student.name %>">
                     Detail !
                 </a>
             </div>
