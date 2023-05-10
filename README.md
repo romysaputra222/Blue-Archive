@@ -1,8 +1,5 @@
 <h1 align="center">List Istri Istriku hehehe</h1>
 <p>
-  <a href="https://www.npmjs.com/package/express" target="_blank">
-    <img alt="Version" src="https://img.shields.io/npm/v/Simple Web Using API.svg">
-  </a>
   <a href="https://api-blue-archive.vercel.app/" target="_blank">
     <img alt="License: ISC" src="https://img.shields.io/badge/License-ISC-yellow.svg" />
   </a>
