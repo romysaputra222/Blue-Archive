@@ -1,6 +1,6 @@
-<h1 align="center">Welcome to Simple Web Using API 👋</h1>
+<h1 align="center">List Istri Istriku hehehe</h1>
 <p>
-  <a href="https://www.npmjs.com/package/Simple Web Using API" target="_blank">
+  <a href="https://www.npmjs.com/package/express" target="_blank">
     <img alt="Version" src="https://img.shields.io/npm/v/Simple Web Using API.svg">
   </a>
   <a href="https://api-blue-archive.vercel.app/" target="_blank">
@@ -10,22 +10,10 @@
 
 > Simple Web Using API
 
-## Install
-
-```sh
-npm install
-```
-
-## Usage
+## Cara Run...
 
 ```sh
 npm rum romyy
-```
-
-## Run tests
-
-```sh
-npm run test
 ```
 
 ## Author
@@ -35,7 +23,7 @@ npm run test
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://api-blue-archive.vercel.app/). 
+Contributions, issues and feature requests are welcome!<br />Feel free to check [Blue Archive API](https://api-blue-archive.vercel.app/). 
 
 ## Show your support
 
@@ -45,5 +33,3 @@ Give a ⭐️ if this project helped you!
 
 This project is [ISC](https://api-blue-archive.vercel.app/) licensed.
 
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
