@@ -1,0 +1,31 @@
+<div class="next-prev">
+    <div class="prev">
+        <% if (page===1) { %>
+            <a href="?page=<%= page %>">&laquo; Previous</a>
+            <% } else { %>
+                <a href="?page=<%= page - 1 %>">&laquo; Previous</a>
+                <% } %>
+    </div>
+    <div class="number-page">
+        <% for( let i=1; i < 7; i++ ) { %>
+            <% if (i===page) { %>
+
+                <a href="?page=<%= i  %>" class="active">
+                    <%= i %>
+                </a>
+                <% } else { %>
+
+                    <a href="?page=<%= i  %>">
+                        <%= i %>
+                    </a>
+                    <% } %>
+                        <% } %>
+    </div>
+    <div class="next">
+        <% if (page===6) { %>
+            <a href="?page=<%= page %>">Next &raquo;</a>
+            <% } else { %>
+                <a href="?page=<%= page + 1 %>">Next &raquo;</a>
+                <% } %>
+    </div>
+</div>

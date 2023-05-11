@@ -10,13 +10,14 @@ server.use(expressLayouts);
 server.use(express.static('public'));
 
 server.get('/', async (req, res) => {
-    const page = req.query.page;
+    let page = parseInt(req.query.page);
+    if ((!page) || (page < 1) || (page > 6)) page = 1;
     const data = await getStudent(page);
-    // con
     res.render('index', {
         title: 'Blue Archive Students',
         layout: 'layout/main',
-        data
+        data,
+        page
     });
 });
 

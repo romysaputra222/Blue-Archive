@@ -1,15 +1,20 @@
-<% if (!data) { %>
-    <p>DATA GAGAL DILOAD</p>
-    <% }else{ %>
-        <% data.forEach(student=> { %>
-            <div class="card">
-                <img id="foto" src="<%= student.photoUrl %>" alt="<%= student.photoUrl %>">
-                <h2>
-                    <%= student.name %>
-                </h2>
-                <a href="/detail?nama=<%= student.name %>">
-                    Detail !
-                </a>
+<%- include('./layout/next-prev') %>
+
+    <% if (!data) { %>
+        <p>DATA GAGAL DILOAD</p>
+        <% }else{ %>
+            <div class="container">
+                <% data.forEach(student=> { %>
+                    <div class="card">
+                        <img id="foto" src="<%= student.photoUrl %>" alt="<%= student.photoUrl %>">
+                        <h2>
+                            <%= student.name %>
+                        </h2>
+                        <a href="/detail?nama=<%= student.name %>">
+                            Detail !
+                        </a>
+                    </div>
+                    <% }) %>
             </div>
-            <% }) %>
-                <% } %>
+            <% } %>
+                <%- include('./layout/next-prev') %>

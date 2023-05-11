@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     /* cursor: url(/img/cursor.png), auto; */
+    font-family: monospace;
 }
 
 #foto {
@@ -64,7 +65,7 @@ nav img {
 
 .card a {
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 2px;
     text-decoration: none;
     border: 1px solid var(--black);
     color: var(--black);
@@ -80,7 +81,80 @@ nav img {
     box-shadow: 2px 2px 2px var(--black);
 }
 
-@media screen and (max-width: 840px) {
+.next-prev {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+
+.next-prev a {
+    text-decoration: none;
+    border-radius: 2px;
+    padding: 10px 15px;
+    margin: 0 5px;
+}
+
+.next-prev .next a {
+    background-color: #ddd;
+    color: var(--black);
+}
+
+.next-prev .prev a {
+    background-color: #666;
+    color: var(--white);
+}
+
+.next-prev .prev a,
+.next-prev .next a {
+    margin: 0 50px;
+}
+
+.next-prev .prev,
+.next-prev .next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.next-prev .number-page {
+    text-align: center;
+}
+
+.next-prev .number-page a {
+    display: inline-block;
+    background-color: #666;
+    color: var(--white);
+    transition: .3s;
+}
+
+.next-prev .number-page a:hover {
+    background-color: #ddd;
+    color: var(--black);
+}
+
+.next-prev .number-page .active {
+    background-color: #ddd;
+    color: var(--black);
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+    }
+
+
+    #foto {
+        width: 100px;
+        height: 85px;
+        object-position: 0 -15px;
+        box-shadow: 0 2px 5px var(--black);
+    }
+
     nav {
         padding: 10px;
     }
@@ -90,21 +164,31 @@ nav img {
     }
 
     .card {
-        width: 200px;
+        width: 100px;
+        align-self: stretch;
+        display: grid;
+        grid-template-rows: 85px 50px;
+        justify-content: center;
     }
 
     .card h2 {
-        font-size: 13px;
+        font-size: 10px;
         text-align: center;
     }
 
-    .card #foto {
-        width: 200px;
-        height: 200px;
+    .card a {
+        padding: 3px;
+        font-size: 10px;
     }
 
-    .card a {
-        padding: 5px;
-        font-size: 14px;
+    .next-prev .prev a,
+    .next-prev .next a {
+        margin: 0 19px;
+    }
+
+    .next-prev a {
+        font-size: 10px;
+        padding: 5px 7px;
+        margin: 0;
     }
 }
