@@ -15,7 +15,7 @@ npm rum romyy
 
 ## Author
 
-👤 **Romy-sensei..**
+👤 **Romy ...**
 
 
 ## 🤝 Contributing
